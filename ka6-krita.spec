@@ -9,12 +9,12 @@
 Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
-Version:	6.0.0
+Version:	6.0.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
-# Source0-md5:	35915febe24da9c4782665ac9ca59a42
+# Source0-md5:	93221ab874660d4fb2b637a4a3e0fd3c
 URL:		https://www.krita.org/
 BuildRequires:	OpenColorIO-devel >= 1.1.1
 BuildRequires:	OpenEXR-devel
