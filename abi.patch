@@ -1,0 +1,12 @@
+diff -up krita-6.0.1/cmake/modules/SIPMacros.cmake.old krita-6.0.1/cmake/modules/SIPMacros.cmake
+--- krita-6.0.1/cmake/modules/SIPMacros.cmake.old	2026-04-22 14:22:11.327972996 +0200
++++ krita-6.0.1/cmake/modules/SIPMacros.cmake	2026-04-22 14:22:34.339779774 +0200
+@@ -152,7 +152,7 @@ else()
+         endif()
+ 
+         if (QT_MAJOR_VERSION STREQUAL "6")
+-            set(abi_version "13.0")
++            set(abi_version "13.8")
+             set(sip_disabled_features "[\"Krita_Qt5\"]")
+         else()
+             set(abi_version "12.8")
