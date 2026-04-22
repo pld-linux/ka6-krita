@@ -2,7 +2,7 @@
 # - KSeExpr 4.0.0.0 https://invent.kde.org/graphics/kseexpr
 # - system raqm (bundled, modified? version is used)
 %define		_state		stable
-%define		qt_ver		6.10.0
+%define		qt_ver		6.11.0
 %define		kf_ver		6.23.0
 %define		orgname		krita
 
@@ -10,11 +10,12 @@ Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
 Version:	6.0.1
-Release:	2
+Release:	3
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
 # Source0-md5:	93221ab874660d4fb2b637a4a3e0fd3c
+Patch0:		abi.patch
 URL:		https://www.krita.org/
 BuildRequires:	OpenColorIO-devel >= 1.1.1
 BuildRequires:	OpenEXR-devel
@@ -25,10 +26,12 @@ BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	Qt6Network-devel >= %{qt_ver}
 BuildRequires:	Qt6PrintSupport-devel >= %{qt_ver}
 BuildRequires:	Qt6Qml-devel >= %{qt_ver}
+BuildRequires:	Qt6Qt5Compat-devel >= %{qt_ver}
 BuildRequires:	Qt6Quick-devel >= %{qt_ver}
 BuildRequires:	Qt6Sql-devel >= %{qt_ver}
 BuildRequires:	Qt6Svg-devel >= %{qt_ver}
 BuildRequires:	Qt6Test-devel >= %{qt_ver}
+BuildRequires:	Qt6WaylandClient-devel >= %{qt_ver}
 BuildRequires:	Qt6Widgets-devel >= %{qt_ver}
 BuildRequires:	Qt6Xml-devel >= %{qt_ver}
 BuildRequires:	SDL2-devel >= 2.0
@@ -47,6 +50,7 @@ BuildRequires:	harfbuzz-devel >= 4.0.0
 BuildRequires:	immer-devel
 BuildRequires:	ka6-libkdcraw-devel >= 5.0.0
 BuildRequires:	kf6-extra-cmake-modules >= 5.22
+BuildRequires:	kf6-kcolorscheme-devel >= %{kf_ver}
 BuildRequires:	kf6-kcompletion-devel >= %{kf_ver}
 BuildRequires:	kf6-kconfig-devel >= %{kf_ver}
 BuildRequires:	kf6-kcoreaddons-devel >= %{kf_ver}
@@ -91,6 +95,7 @@ BuildRequires:	xz
 BuildRequires:	zlib-devel
 BuildRequires:	zug-devel
 Requires:	%{name}-data = %{version}-%{release}
+%requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	ka5-krita < 6.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -137,6 +142,7 @@ Dane dla aplikacji Krita.
 
 %prep
 %setup -q -n %{orgname}-%{version}
+%patch -P0 -p1
 
 %build
 %cmake -B build \
