@@ -9,12 +9,12 @@
 Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
-Version:	6.0.1
-Release:	3
+Version:	6.0.2
+Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
-# Source0-md5:	93221ab874660d4fb2b637a4a3e0fd3c
+# Source0-md5:	e6a21d8eb7b68a1da6f03e45c5f2872b
 Patch0:		abi.patch
 URL:		https://www.krita.org/
 BuildRequires:	OpenColorIO-devel >= 1.1.1
@@ -425,6 +425,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/krita/components/+Fusion/ToolSeparatorBase.qml
 %dir %{_libdir}/qt6/qml/org/krita/components/+qt5
 %{_libdir}/qt6/qml/org/krita/components/+qt5/WindowFocusChecker.qml
+%dir %{_libdir}/qt6/qml/org/krita/components/+qquickwidget
+%{_libdir}/qt6/qml/org/krita/components/+qquickwidget/PopupBase.qml
 %{_libdir}/qt6/qml/org/krita/components/AngleSelector.qml
 %{_libdir}/qt6/qml/org/krita/components/CssStylePresetDelegate.qml
 %{_libdir}/qt6/qml/org/krita/components/CurveWidget.qml
@@ -437,6 +439,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/krita/components/IntParseSpinBox.qml
 %{_libdir}/qt6/qml/org/krita/components/IntSliderSpinBox.qml
 %{_libdir}/qt6/qml/org/krita/components/OptionButtonStrip.qml
+%{_libdir}/qt6/qml/org/krita/components/PopupBase.qml
 %{_libdir}/qt6/qml/org/krita/components/ResourceDelegateBase.qml
 %{_libdir}/qt6/qml/org/krita/components/ResourcePopup.qml
 %{_libdir}/qt6/qml/org/krita/components/ResourceView.qml
