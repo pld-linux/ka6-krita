@@ -9,12 +9,12 @@
 Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
-Version:	6.0.2
-Release:	2
+Version:	6.0.3
+Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
-# Source0-md5:	e6a21d8eb7b68a1da6f03e45c5f2872b
+# Source0-md5:	82b384cda6fca7dbdb5a4aa49690a7ec
 Patch0:		abi.patch
 URL:		https://www.krita.org/
 BuildRequires:	OpenColorIO-devel >= 1.1.1
@@ -70,6 +70,7 @@ BuildRequires:	libmypaint-devel >= 1.4.0
 BuildRequires:	libpng-devel >= 1.2.6
 BuildRequires:	libquadmath-devel
 BuildRequires:	libraw-devel >= 0.16
+BuildRequires:	libspng-devel
 BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	libtiff-devel
 BuildRequires:	libunibreak-devel >= 5.0
