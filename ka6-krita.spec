@@ -10,7 +10,7 @@ Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
 Version:	6.0.3
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
@@ -64,7 +64,7 @@ BuildRequires:	kf6-kwindowsystem-devel >= %{kf_ver}
 BuildRequires:	lager-devel
 BuildRequires:	lcms2-devel >= 2.4
 BuildRequires:	libheif-devel >= 1.11.0
-BuildRequires:	libjpeg-turbo-devel >= 2.1.3
+BuildRequires:	libjpeg-turbo-devel >= 3.2.0-2
 BuildRequires:	libjxl-devel >= 0.9.0
 BuildRequires:	libmypaint-devel >= 1.4.0
 BuildRequires:	libpng-devel >= 1.2.6
