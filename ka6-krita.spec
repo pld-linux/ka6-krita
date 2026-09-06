@@ -10,7 +10,7 @@ Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
 Version:	6.0.3
-Release:	2
+Release:	3
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
