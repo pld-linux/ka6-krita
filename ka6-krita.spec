@@ -9,12 +9,12 @@
 Summary:	A digital painting application
 Summary(pl.UTF-8):	Aplikacja do rysunków cyfrowych
 Name:		ka6-krita
-Version:	6.0.3
-Release:	3
+Version:	6.0.4
+Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Graphics
 Source0:	https://download.kde.org/%{_state}/krita/%{version}/%{orgname}-%{version}.tar.xz
-# Source0-md5:	82b384cda6fca7dbdb5a4aa49690a7ec
+# Source0-md5:	62a965134dcbb12591224d13ba6982c6
 Patch0:		abi.patch
 URL:		https://www.krita.org/
 BuildRequires:	OpenColorIO-devel >= 1.1.1
@@ -188,8 +188,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kritarunner
 %{_libdir}/libkritabasicflakes.so.*.*.*
 %ghost %{_libdir}/libkritabasicflakes.so.21
-%{_libdir}/libkritacolor.so.*.*.*
-%ghost %{_libdir}/libkritacolor.so.21
 %{_libdir}/libkritacommand.so.*.*.*
 %ghost %{_libdir}/libkritacommand.so.21
 %{_libdir}/libkritaexifcommon.so.*.*.*
@@ -409,7 +407,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/kritaplugins/kritawebpexport.so
 %{_libdir}/kritaplugins/kritawebpimport.so
 %{_libdir}/kritaplugins/kritawgcolorselector.so
-%{_libdir}/kritaplugins/kritaxcfimport.so
 %{_libdir}/kritaplugins/kritaxmp.so
 %{_libdir}/kritaplugins/kritabrushhud.so
 %{_libdir}/kritaplugins/kritaplatformpluginwayland.so
@@ -472,7 +469,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/libkritabasicflakes.so
-%{_libdir}/libkritacolor.so
 %{_libdir}/libkritacommand.so
 %{_libdir}/libkritaexifcommon.so
 %{_libdir}/libkritaflake.so
@@ -528,7 +524,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/krita_tga.desktop
 %{_desktopdir}/krita_tiff.desktop
 %{_desktopdir}/krita_webp.desktop
-%{_desktopdir}/krita_xcf.desktop
 %{_desktopdir}/org.kde.krita.desktop
 %{_desktopdir}/krita_rgbe.desktop
 %{_datadir}/color-schemes/KritaBlender.colors
